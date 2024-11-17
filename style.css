@@ -1,0 +1,125 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7e6ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heart-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.heart {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #ff5e7e;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #ff5e7e;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -150px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 150px;
+}
+
+h1 {
+    
+z-index: 1;
+    position: absolute;
+  
+  width:500px;
+  padding-left:140px ;
+    left: 60%;
+    text-align: center;
+  
+    transform: translate(-50%, -50%) rotate(45deg);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+ 
+}
+
+button {
+    z-index: 1;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    padding: 10px 20px;
+    background-color: white;
+    color: #ff5e7e;
+    border: 2px solid #ff5e7e;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff5e7e;
+    color: white;
+}
+
+.heart-floating {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    transform: rotate(-45deg);
+    opacity: 0;
+    animation: float 4s ease-in-out forwards;
+}
+
+.heart-floating::before, .heart-floating::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.heart-floating::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart-floating::after {
+    top: 0;
+    left: 10px;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(-45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-200px) rotate(-45deg);
+    }
+}
