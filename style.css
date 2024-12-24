@@ -1,4 +1,4 @@
-/* Styles généraux */
+/* Styles de base pour tous les appareils */
 body, html {
     margin: 0;
     padding: 0;
@@ -122,6 +122,69 @@ button:hover {
 }
 
 /* Media Queries pour rendre le site responsive */
+@media (max-width: 1200px) {
+    .heart-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .heart {
+        width: 250px;
+        height: 250px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 250px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        width: 400px;
+        padding-left: 100px;
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+        top: 75%;
+        left: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .heart-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .heart {
+        width: 220px;
+        height: 220px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 220px;
+        height: 220px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        width: 350px;
+        padding-left: 90px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        top: 80%;
+        left: 50%;
+    }
+}
+
+/* Adaptation pour les tablettes et petites tablettes */
 @media (max-width: 768px) {
     .heart-container {
         width: 200px;
@@ -140,19 +203,20 @@ button:hover {
     }
 
     h1 {
-        font-size: 2rem;
-        width: 400px;
-        padding-left: 100px;
+        font-size: 1.8rem;
+        width: 300px;
+        padding-left: 80px;
     }
 
     button {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-        top: 80%;
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        top: 85%;
         left: 50%;
     }
 }
 
+/* Adaptation pour les smartphones - petits écrans */
 @media (max-width: 480px) {
     .heart-container {
         width: 150px;
@@ -172,14 +236,78 @@ button:hover {
 
     h1 {
         font-size: 1.5rem;
-        width: 300px;
-        padding-left: 80px;
+        width: 250px;
+        padding-left: 60px;
     }
 
     button {
         padding: 6px 12px;
+        font-size: 0.75rem;
+        top: 90%;
+        left: 50%;
+    }
+}
+
+/* Adaptation spécifique pour les iPhones (Portrait et Paysage) */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    .heart-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .heart {
+        width: 180px;
+        height: 180px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        width: 230px;
+        padding-left: 50px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        top: 90%;
+        left: 50%;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+    .heart-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .heart {
+        width: 220px;
+        height: 220px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 220px;
+        height: 220px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        width: 280px;
+        padding-left: 70px;
+    }
+
+    button {
+        padding: 8px 14px;
         font-size: 0.8rem;
         top: 85%;
         left: 50%;
     }
 }
+
