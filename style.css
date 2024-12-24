@@ -1,4 +1,4 @@
-
+/* Styles généraux */
 body, html {
     margin: 0;
     padding: 0;
@@ -47,20 +47,16 @@ body, html {
 }
 
 h1 {
-    
-z-index: 1;
+    z-index: 1;
     position: absolute;
-  
-  width:500px;
-  padding-left:140px ;
+    width: 500px;
+    padding-left: 140px;
     left: 60%;
     text-align: center;
-  
     transform: translate(-50%, -50%) rotate(45deg);
     color: white;
     font-size: 3rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
- 
 }
 
 button {
@@ -113,6 +109,7 @@ button:hover {
     left: 10px;
 }
 
+/* Animation pour faire flotter le cœur */
 @keyframes float {
     0% {
         opacity: 1;
@@ -121,5 +118,68 @@ button:hover {
     100% {
         opacity: 0;
         transform: translateY(-200px) rotate(-45deg);
+    }
+}
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+    .heart-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .heart {
+        width: 200px;
+        height: 200px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        width: 400px;
+        padding-left: 100px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        top: 80%;
+        left: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .heart-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .heart {
+        width: 150px;
+        height: 150px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        width: 300px;
+        padding-left: 80px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        top: 85%;
+        left: 50%;
     }
 }
